@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "../curl-7.81.0/include/curl/curl.h"
+#include "../CurlHPP/curl.h"
 
 
 static size_t WriteCallback( void* contents, size_t size, size_t nmemb, void* userp )
