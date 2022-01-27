@@ -9,23 +9,23 @@ using namespace std;
 namespace WebParcer
 {
    //! Класс реализующий парсинг http/https страницы и хранение полученной информации 
-   class TWebParcer
+   class TWebDownloader
    {
       public:
 
          //! Конструктор по умолчанию 
-         TWebParcer() = default;
+         TWebDownloader() = default;
 
          //! Деструктор по умолчанию 
-         ~TWebParcer() = default;
-
-         //! Функция выполняющая обратный вызов
-         static size_t WriteCallback( void* contents, size_t size, size_t nmemb, void* userp );
+         ~TWebDownloader() = default;
 
          //! Функция выполняющая запись вэб страницы и записывающая ее в readBuffer
          string& parcingWebPage( string input );
 
       private:
+
+         //! Функция выполняющая обратный вызов
+         static size_t WriteCallback( void* contents, size_t size, size_t nmemb, void* userp );
 
          //! Переменные для записи и хранения кода вэб страницы
          CURL* curl;                           //!< Указатель на дескриптор уйстройства

@@ -6,13 +6,13 @@ using namespace std;
 
 namespace WebParcer
 {
-   size_t TWebParcer::WriteCallback( void* contents, size_t size, size_t nmemb, void* userp )
+   size_t TWebDownloader::WriteCallback( void* contents, size_t size, size_t nmemb, void* userp )
    {
       ( ( string* )userp )->append( ( char* )contents, size * nmemb );
       return size * nmemb;
    }
 
-   string& TWebParcer::parcingWebPage( string input )
+   string& TWebDownloader::parcingWebPage( string input )
    {
       curl = curl_easy_init();
 
