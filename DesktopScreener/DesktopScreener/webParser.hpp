@@ -1,12 +1,12 @@
-#ifndef _T_Web_Parcer_HPP_
-#define _T_Web_Parcer_HPP_
+#ifndef _T_WEB_PARSER_HPP_
+#define _T_WEB_PARSER_HPP_
 
 #include "../CurlHPP/curl.h"
 #include <string>
 
 using namespace std;
 
-namespace WebParcer
+namespace WebParser
 {
    //!  ласс реализующий парсинг http/https страницы и хранение полученной информации 
    class TWebDownloader
@@ -19,13 +19,15 @@ namespace WebParcer
          //! ƒеструктор по умолчанию 
          ~TWebDownloader() = default;
 
+         string getReadBuffer() const;
+
          //! ‘ункци€ выполн€юща€ запись вэб страницы и записывающа€ ее в readBuffer
-         string& parcingWebPage( string input );
+         string& parsingWebPage( string input );
 
       private:
 
          //! ‘ункци€ выполн€юща€ обратный вызов
-         static size_t WriteCallback( void* contents, size_t size, size_t nmemb, void* userp );
+         static size_t writeCallback( void* contents, size_t size, size_t nmemb, void* userp );
 
          //! ѕеременные дл€ записи и хранени€ кода вэб страницы
          CURL* curl;                           //!< ”казатель на дескриптор уйстройства
@@ -34,5 +36,5 @@ namespace WebParcer
    };
 }
 
-#endif // !_T_Web_Parcer_HPP_
+#endif // !_T_WEB_PARSER_HPP_
 

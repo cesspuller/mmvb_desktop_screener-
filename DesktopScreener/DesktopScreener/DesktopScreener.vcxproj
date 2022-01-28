@@ -85,11 +85,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="webParcer.cpp" />
+    <ClCompile Include="stringParser.cpp" />
+    <ClCompile Include="webParser.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="webParcer.hpp" />
+    <ClInclude Include="stringParser.hpp" />
+    <ClInclude Include="webParser.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
