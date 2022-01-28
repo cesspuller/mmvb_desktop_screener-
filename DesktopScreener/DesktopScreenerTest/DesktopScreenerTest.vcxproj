@@ -25,13 +25,15 @@
   <ImportGroup Label="Shared" />
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(SolutionDir)Debug;$(SolutionDir)DesktopScreener;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)DesktopScreener;</IncludePath>
+  </PropertyGroup>
   <ItemGroup>
-    <ClInclude Include="..\DesktopScreener\webParser.hpp" />
     <ClInclude Include="first_test.hpp" />
     <ClInclude Include="webParser_test.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\DesktopScreener\webParser.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -52,10 +54,14 @@
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>$(MSBuildThisFileDirectory)include;%(AdditionalIncludeDirectories);$(IncludePath)mmvb_desktop_screener-\DesktopScreener\curl;</AdditionalIncludeDirectories>
+      <MinimalRebuild>false</MinimalRebuild>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>%(AdditionalDependencies);DesktopScreener.lib;libcurld.lib;Crypt32.lib;ws2_32.lib;winmm.lib;wldap32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\curl;</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
