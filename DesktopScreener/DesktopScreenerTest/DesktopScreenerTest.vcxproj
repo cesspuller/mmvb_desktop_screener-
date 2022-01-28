@@ -46,18 +46,13 @@
     <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);</ExternalIncludePath>
   </PropertyGroup>
   <ItemGroup>
-    <ClInclude Include="..\DesktopScreener\webParcer.hpp" />
+    <ClInclude Include="..\DesktopScreener\webParser.hpp" />
     <ClInclude Include="first_test.hpp" />
-    <ClInclude Include="webParcer_test.hpp" />
+    <ClInclude Include="webParser_test.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\DesktopScreener\webParcer.cpp" />
+    <ClCompile Include="..\DesktopScreener\webParser.cpp" />
     <ClCompile Include="main.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\fftOnCuda\fftOnCuda.vcxproj">
-      <Project>{90dc93f9-412b-4aba-b52b-bb886731e134}</Project>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

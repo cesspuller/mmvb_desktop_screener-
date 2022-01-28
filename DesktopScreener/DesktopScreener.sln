@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DesktopScreener", "DesktopScreener\DesktopScreener.vcxproj", "{D3187D48-4896-4ECC-97BB-D8CB55145793}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DesktopScreenerTest", "DesktopScreenerTest\fftOnCudaTestG.vcxproj", "{EDE51214-E072-40A9-9F72-97BAAF37C5F9}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DesktopScreenerTest", "DesktopScreenerTest\DesktopScreenerTest.vcxproj", "{EDE51214-E072-40A9-9F72-97BAAF37C5F9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,7 +24,6 @@ Global
 		{EDE51214-E072-40A9-9F72-97BAAF37C5F9}.Debug|x64.ActiveCfg = Debug|x64
 		{EDE51214-E072-40A9-9F72-97BAAF37C5F9}.Debug|x64.Build.0 = Debug|x64
 		{EDE51214-E072-40A9-9F72-97BAAF37C5F9}.Debug|x86.ActiveCfg = Debug|Win32
-		{EDE51214-E072-40A9-9F72-97BAAF37C5F9}.Debug|x86.Build.0 = Debug|Win32
 		{EDE51214-E072-40A9-9F72-97BAAF37C5F9}.Release|x64.ActiveCfg = Release|x64
 		{EDE51214-E072-40A9-9F72-97BAAF37C5F9}.Release|x64.Build.0 = Release|x64
 		{EDE51214-E072-40A9-9F72-97BAAF37C5F9}.Release|x86.ActiveCfg = Release|Win32

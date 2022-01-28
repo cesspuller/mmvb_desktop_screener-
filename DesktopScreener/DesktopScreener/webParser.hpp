@@ -1,5 +1,5 @@
-#ifndef _T_Web_Parcer_HPP_
-#define _T_Web_Parcer_HPP_
+#ifndef _T_WEB_PARSER_HPP_
+#define _T_WEB_PARSER_HPP_
 
 #include "../CurlHPP/curl.h"
 #include <string>
@@ -20,7 +20,9 @@ namespace WebParser
          ~TWebDownloader() = default;
 
          //! Функция выполняющая запись вэб страницы и записывающая ее в readBuffer
-         string& parsingWebPage( string input );
+         //! input - Адресс откуда скачивается код страницы 
+         //! return - Код страницы 
+         string& parsingWebPage( string& input );
 
       private:
 
@@ -34,5 +36,4 @@ namespace WebParser
    };
 }
 
-#endif // !_T_Web_Parcer_HPP_
-
+#endif // !_T_WEB_PARSER_HPP_
