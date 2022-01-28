@@ -12,7 +12,7 @@ namespace WebParser
       return size * nmemb;
    }
 
-   string& TWebDownloader::parsingWebPage( string& input )
+   string& TWebDownloader::parsingWebPage( const string& input ) 
    {
       curl = curl_easy_init();
 
