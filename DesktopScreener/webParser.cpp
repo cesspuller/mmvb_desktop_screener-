@@ -12,19 +12,31 @@ namespace WebParser
       return size * nmemb;
    }
 
-   string& TWebDownloader::parsingWebPage( const string& input ) 
+   bool TWebDownloader::parsingWebPage( const string& input ) 
    {
       curl = curl_easy_init();
 
       if ( curl )
       {
-         curl_easy_setopt( curl, CURLOPT_URL, input.c_str() );
-         curl_easy_setopt( curl, CURLOPT_WRITEFUNCTION, WriteCallback );
-         curl_easy_setopt( curl, CURLOPT_WRITEDATA, &readBuffer );
-         res = curl_easy_perform( curl );
+         checkingResult( curl_easy_setopt( curl, CURLOPT_URL, input.c_str() ) );
+         checkingResult( curl_easy_setopt( curl, CURLOPT_WRITEFUNCTION, WriteCallback ) ) ;
+         checkingResult( curl_easy_setopt( curl, CURLOPT_WRITEDATA, &readBuffer ) );
+         checkingResult( resultCURLFunc = curl_easy_perform( curl ) );
          curl_easy_cleanup( curl );
 
-         return readBuffer;
+         if( resultCURLFunc == CURLE_OK )
+            return true;
       }
+
+      return false;
    };
+
+   void TWebDownloader::checkingResult( CURLcode result )
+   {
+      if ( result != CURLE_OK )
+      {
+         resultCURLFunc = result;
+         cout << endl << "! When loading the page, CURL worked freelance! " << endl;
+      }
+   }
 }
