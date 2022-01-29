@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>string::append - C++ Reference</title>
+<link rel="canonical" href="https://www.cplusplus.com/reference/string/string/append/">
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+<link rel="stylesheet" type="text/css" href="/v322/main.css">
+<script src="/v322/main.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="I_top">
+<div id="I_header">
+<div id="I_logo"><a href="/" title="cplusplus.com"><div></div></a></div>
+<div id="I_search">
+<form id="search" action="/search.do" method="get">
+Search: <input name="q" size="20" class="txt"> <input type="submit" value="Go" class="btn">
+</form>
+</div>
+<div id="I_bar">
+<ul>
+<li><a href="/reference/">Reference</a></li>
+<li><a href="/reference/string/">&lt;string&gt;</a></li>
+<li><a href="/reference/string/string/">string</a></li>
+<li class="here">append</li>
+</ul>
+</div>
+<div id="I_user" class="C_LoginBox"><span title="ajax"></span></div>
+</div>
+</div>
+<div id="I_mid">
+<div id="I_wrap">
+<div id="I_minheight"></div>
+<div id="I_main">
+<div class="C_support">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1444228343479937" crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-1444228343479937"
+     data-ad-slot="9701143201"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div><div id="I_content">
+<div class="C_doc">
+<div id="I_type">public member function
+</div>
+<div id="I_file">&lt;string&gt;
+</div>
+<h1><span class="namespace" title="namespace std">std::</span><a href="/reference/string/string/">string</a>::append</h1>
+<div class="C_prototype"><div class="C_SwitchCases">
+<div title="C++98">
+<table><tr class="odd"><th>string (1)</th><td><pre>
+string&amp; append (const string&amp; str);
+</pre></td></tr><tr class="even"><th>substring (2)</th><td><pre>
+string&amp; append (const string&amp; str, size_t subpos, size_t sublen);
+</pre></td></tr><tr class="odd"><th>c-string (3)</th><td><pre>
+string&amp; append (const char* s);
+</pre></td></tr><tr class="even"><th>buffer (4)</th><td><pre>
+string&amp; append (const char* s, size_t n);
+</pre></td></tr><tr class="odd"><th>fill (5)</th><td><pre>
+string&amp; append (size_t n, char c);
+</pre></td></tr><tr class="even"><th>range (6)</th><td><pre>template &lt;class InputIterator&gt;
+   string&amp; append (InputIterator first, InputIterator last);
+</pre></td></tr></table></div>
+<div title="C++11" class="off">
+<table><tr class="odd"><th>string (1)</th><td><pre>
+string&amp; append (const string&amp; str);
+</pre></td></tr><tr class="even"><th>substring (2)</th><td><pre>
+string&amp; append (const string&amp; str, size_t subpos, size_t sublen);
+</pre></td></tr><tr class="odd"><th>c-string (3)</th><td><pre>
+string&amp; append (const char* s);
+</pre></td></tr><tr class="even"><th>buffer (4)</th><td><pre>
+string&amp; append (const char* s, size_t n);
+</pre></td></tr><tr class="odd"><th>fill (5)</th><td><pre>
+string&amp; append (size_t n, char c);
+</pre></td></tr><tr class="even"><th>range (6)</th><td><pre>template &lt;class InputIterator&gt;
+   string&amp; append (InputIterator first, InputIterator last);
+</pre></td></tr><tr class="odd"><th>initializer list(7)</th><td><pre>
+string&amp; append (initializer_list&lt;char&gt; il);
+</pre></td></tr></table></div>
+<div title="C++14" class="off">
+<table><tr class="even"><th>string (1)</th><td><pre>
+string&amp; append (const string&amp; str);
+</pre></td></tr><tr class="odd"><th>substring (2)</th><td><pre>
+string&amp; append (const string&amp; str, size_t subpos, size_t sublen = npos);
+</pre></td></tr><tr class="even"><th>c-string (3)</th><td><pre>
+string&amp; append (const char* s);
+</pre></td></tr><tr class="odd"><th>buffer (4)</th><td><pre>
+string&amp; append (const char* s, size_t n);
+</pre></td></tr><tr class="even"><th>fill (5)</th><td><pre>
+string&amp; append (size_t n, char c);
+</pre></td></tr><tr class="odd"><th>range (6)</th><td><pre>template &lt;class InputIterator&gt;
+   string&amp; append (InputIterator first, InputIterator last);
+</pre></td></tr><tr class="even"><th>initializer list(7)</th><td><pre>
+string&amp; append (initializer_list&lt;char&gt; il);</pre></td></tr></table></div>
+</div>
+</div><div id="I_description">Append to string</div>
+<section id="description">
+Extends the <a href="/string">string</a> by appending additional characters at the end of its current value:<br>
+
+The output has reached the limit and was truncated.
+To view the full output use 'Show Stack Trace in a new window' action.

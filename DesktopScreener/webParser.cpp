@@ -10,7 +10,7 @@ namespace WebParser
    {
       ( ( string* )userp )->append( ( char* )contents, size * nmemb );
       return size * nmemb;
-   }
+   };
 
    bool TWebDownloader::parsingWebPage( const string& input ) 
    {
@@ -20,7 +20,7 @@ namespace WebParser
       {
          checkingResult( curl_easy_setopt( curl, CURLOPT_URL, input.c_str() ) );
          checkingResult( curl_easy_setopt( curl, CURLOPT_WRITEFUNCTION, WriteCallback ) ) ;
-         checkingResult( curl_easy_setopt( curl, CURLOPT_WRITEDATA, &readBuffer ) );
+         checkingResult( curl_easy_setopt( curl, CURLOPT_WRITEDATA, &page ) );
          checkingResult( resultCURLFunc = curl_easy_perform( curl ) );
          curl_easy_cleanup( curl );
 
@@ -38,5 +38,10 @@ namespace WebParser
          resultCURLFunc = result;
          cout << endl << "! When loading the page, CURL worked freelance! " << endl;
       }
-   }
+   };
+
+   string& TWebDownloader::getPage() 
+   {
+      return page;
+   };
 }
