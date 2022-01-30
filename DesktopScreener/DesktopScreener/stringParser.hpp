@@ -34,7 +34,15 @@ namespace WebParser
             //! Функция парсящая временной промежуток 
             string frameParser( string writeBuffer );
 
-            string writeBuffer;                    //!< Полученный код запрашиваемой страницы
+            //!< Полученный код запрашиваемой страницы
+            string writeBuffer;            
+
+         private:
+            
+            //!
+            string ticker;                        //!< Строка содержащая тикер акции
+            string price;                         //!< Строка содержащая цену акции
+
    };
 }
 #endif // !T_STRING_PARSER_HPP_
